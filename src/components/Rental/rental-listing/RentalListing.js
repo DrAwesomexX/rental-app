@@ -32,6 +32,39 @@ export default connect(any)(RentalListing); //conect returns a function
 // import { connect } from 'react-redux';
 // import * as actions from '../../../actions';
 
+////--------composition-----------
+
+// class AlertListing extends React.Component {
+//   alertUser() {
+//     alert('HI!!!!');
+//   }
+//   render() {
+//     return <RentalListing {...this.props} alertUser={this.alertUser} />;
+//   }
+// }
+
+//------------Higher Order Component-------------
+// function withAlert(WrappedComponent) {
+//   return class extends React.Component {
+//     alertUser() {
+//       alert('HI');
+//     }
+//     render() {
+//       return <WrappedComponent {...this.props} alertUser={this.alertUser} />;
+//     }
+//   };
+// }
+// function withDanger(WrappedComponent) {
+//   return class extends React.Component {
+//     danger() {
+//       alert('You are awesome');
+//     }
+//     render() {
+//       return <WrappedComponent {...this.props} danger={this.danger} />;
+//     }
+//   };
+// }
+
 // class RentalListing extends React.Component {
 //   //   constructor(props) {
 //   //     super(); //this will initialize our component because we are extending from React.Component super is necessary when we want to access state or props inside of a constructor
