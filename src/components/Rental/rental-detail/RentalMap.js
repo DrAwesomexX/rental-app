@@ -1,5 +1,6 @@
 import React from 'react';
 import MapGeocode from '../../map/GoogleMaps';
+const config = require('./../../../configF/dev.js');
 
 class RentalMap extends React.Component {
   render() {
@@ -7,7 +8,7 @@ class RentalMap extends React.Component {
     return (
       <MapGeocode
         isMarkerShown
-        googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3DMsUHiv9Hr-jaaA5v4bGutdmp5nBzDI&v=3.exp&libraries=geometry,drawing,places"
+        googleMapURL={config.g_api}
         loadingElement={<div style={{ height: `100%` }} />}
         containerElement={<div style={{ height: `360px` }} />}
         mapElement={<div style={{ height: `100%` }} />}
